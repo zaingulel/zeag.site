@@ -1,0 +1,24 @@
+// Variables
+// red: #b92b27
+// Yellow #ffbc00
+$website-width: 1280px;
+$main-color: #b92b27;
+$light-color: #f4f4f4;
+$medium-color: #ccc;
+$dark-color: #333;
+$bg-image: url(/dist/img/showcase.jpg);
+$cert-image1: url(/dist/img/certs/cspo.png);
+$cert-image2: url(/dist/img/certs/psmi.png);
+$cert-image3: url(/dist/img/certs/safe.png);
+$cert-image4: url(/dist/img/certs/p2found.png);
+$cert-image5: url(/dist/img/certs/p2pract.png);
+$cert-image6: url(/dist/img/certs/p2agile.png);
+
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
