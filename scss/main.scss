@@ -81,7 +81,7 @@ img {
 #header {
   // Header Home
   &-home {
-    background: url(./img/showcase.jpg) no-repeat center center / cover;
+    background: url(../img/showcase.jpg) no-repeat center center / cover;
     height: 100vh;
     color: #fff;
 
@@ -239,12 +239,20 @@ img {
       
       img {
         margin-bottom: 1rem;
+        height: 12.5rem;
+        width: 12.5rem;
       }
     }
 
     .certs-2 {
       grid-area: ct2;
       font-size: 1rem;
+
+      img {
+        margin-bottom: 1rem;
+        height: 12.5rem;
+        width: 12.5rem;
+      }
     }
 
     .certs-3 {
@@ -253,6 +261,8 @@ img {
 
       img {
         margin-bottom: 1rem;
+        height: 12.5rem;
+        width: 12.5rem;
       }
     }
 
@@ -262,12 +272,20 @@ img {
 
       img {
         margin-bottom: 1rem;
+        height: 12.5rem;
+        width: 12.5rem;
       }
     }
     
     .certs-5 {
       grid-area: ct5;
       font-size: 1rem;
+
+      img {
+        margin-bottom: 1rem;
+        height: 12.5rem;
+        width: 12.5rem;
+      }
     }
 
     .certs-6 {
@@ -276,6 +294,8 @@ img {
 
       img {
         margin-bottom: 1rem;
+        height: 12.5rem;
+        width: 12.5rem;
       }
     }
   }
