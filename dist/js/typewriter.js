@@ -65,7 +65,7 @@ function init() {
 }
 
 // Smooth Scrolling
-$('#main-nav a, .btn').on('click', function(event) {
+$('#main-nav a, .btn, #home-a a, #home-b a').on('click', function(event) {
   if (this.hash !== '') {
     event.preventDefault();
 
@@ -73,9 +73,47 @@ $('#main-nav a, .btn').on('click', function(event) {
 
     $('html, body').animate(
       {
-        scrollTop: $(hash).offset().top - 0
+        scrollTop: $(hash).offset().top - 50
       },
       800
     );
   }
 });
+
+// Sticky Navbar
+window.addEventListener("scroll", function(){
+  let menuArea = document.getElementById('main-nav');
+
+  if(window.pageYOffset > 0){
+    menuArea.classList.add("cus-nav");
+  }else{
+    menuArea.classList.remove("cus-nav")
+  }
+});
+
+
+// CV slide in
+const items = document.querySelectorAll('#work-a li');
+
+const isInViewport = el => {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+};
+
+const run = () =>
+  items.forEach(item => {
+    if (isInViewport(item)) {
+      item.classList.add('show');
+    }
+  });
+
+// Events
+window.addEventListener('load', run);
+window.addEventListener('resize', run);
+window.addEventListener('scroll', run);

@@ -1,33 +1,67 @@
 // Tablets & Smaller
-@media(max-width: 800px) {
+@media(max-width: 900px) {
   #header-home {
     height: 30rem;
 
     .header-content {
-      padding-top: 3rem;
+      padding-top: 15%;
+      
       h1 {
         font-size: 1.75rem;
       }
     }
   }
+
+    // reducing button size
+    %btn-shared {
+      display: inline-block;
+      font-weight: bold;
+      padding: 0.5rem 0.5rem;
+      transition: all 0.5s;
+      border: none;
+      cursor: pointer;
+      opacity: 0.9;
+    }
+
+    // Career Highlights
+
+    // Timeline line to the left
+    #work-a ul li {
+      margin-left: 0;
+    }
+
+    #work-a ul li div {
+      width: calc(100vw - 130px);
+    }
+
+    #work-a ul li:nth-child(even) div {
+      left: 40px;
+    }
+
+    #work-a ul li:nth-child(even) div:before {
+      left: -15px;
+      border-width: 8px 16px 8px 0;
+      border-color: transparent $medium-color transparent transparent;
+    }
+
 }
 
 // Smartphones
 @media(max-width: 500px) {
 
   img#logo {
-    position: absolute;
-    top: 0;
-    left: 0;
+   padding: 0.25rem;
   }
 
   #main-nav {
     flex-direction: column;
     align-items: center;
-    margin-top: 2.5rem;
+    margin-top: 0rem;
+    
 
     li {
-      padding: 1rem;
+      padding: 0.25rem 0.5rem;
+
     }
   }
 

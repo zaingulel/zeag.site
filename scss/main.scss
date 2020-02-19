@@ -37,45 +37,61 @@ img {
 #logo {
   width: 120px;
   height: 35px;
-  padding: 0.75rem 0.5rem;
+  padding: 0.5rem 1.5rem;
+  transition: height 0.5s;
 }
 
 // Main Nav
 #main-nav {
   display: flex;
   justify-content: space-between;
-  padding-top: 1rem;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 0.5rem;
+  width: 100%;
+  transition: background 0.5s;
+  
 
   ul {
     display: flex;
+    
   }
 
   li {
-    padding: 1rem 1.5rem;
+    padding: 0.5rem 1.5rem;
   }
 
   a {
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
-    border-bottom: 4px transparent solid;
-    padding: 0.75rem 0.5rem;
+    border-bottom: 5px transparent solid;
+    padding: 0.66rem 0.5rem;
     transition: border-color 0.5s;
 
     &:hover {
-      border-color: $medium-color;
-      background: $dark-color;
-      opacity: 0.8;
-    }
-
-    &.current {
       border-color: $main-color;
-      background: $dark-color;
-      padding: 0.75rem 0.5rem;
-      opacity: 0.8;
+      opacity: 0.9;
     }
   }
 }
+
+.flow {
+  position: absolute;
+  z-index: -2;
+}
+
+#main-nav.cus-nav {
+  background: $dark-color;
+  z-index: 2;
+  opacity: 0.95;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  padding: 0;
+  transition: padding 0.5s;
+}
+
 
 // Header
 #header {
@@ -88,7 +104,7 @@ img {
     // Header Content
     .header-content {
       text-align: center;
-      padding-top: 12.5%;
+      padding-top: 20%;
 
       h1 {
         font-size: 4rem;
@@ -96,12 +112,6 @@ img {
         padding-bottom: 5%;
       }
     }
-  }
-  // Header Inner
-  &-inner {
-    background: $bg-image no-repeat 20% 10% / cover;
-    height: 5.5rem;
-    border-bottom: 3px solid;
   }
 }
 
@@ -153,58 +163,6 @@ img {
           background: $medium-color;
         }
       }
-    }
-  }
-
-  // Home Section C
-  &-c {
-    .process {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-gap: 1.5rem;
-      text-align: center;
-
-      // process step
-      &-step {
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-size: 28px;
-        background: $main-color;
-        color: set-text-color($main-color);
-        border-radius: 50%;
-        height: 15px;
-        width: 15px;
-        line-height: 15px;
-        padding: 1rem;
-        transition: all 1s;
-      }
-
-      // process-icon
-      // &-icon {
-      //   border-radius: 50%;
-      //   background: $dark-color;
-      //   color: set-text-color($dark-color);
-      //   padding: 2rem;
-      //   width: 70px;
-      //   height: 70px;
-      //   line-height: 70px;
-      //   text-align: center;
-      //   position: relative;
-      //   transition: all 1s;
-
-      //   &:hover {
-      //     background: $main-color;
-      //     width: 90px;
-      //     height: 90px;
-      //     line-height: 90px;
-
-      //     .process-step {
-      //       background: $dark-color;
-      //       color: set-text-color($dark-color);
-      //     }
-      //   }
-      // }
     }
   }
 }
@@ -299,23 +257,424 @@ img {
       }
     }
   }
+
   // About B
   &-b {
-    .progress {
-      overflow: hidden;
-      height: 20px;
-      background: $medium-color;
-      border-radius: 5px;
-      margin-bottom: 1rem;
 
-      div {
-        height: 100%;
-        color: #fff;
-        text-align: center;
-        background: $main-color;
-      }
+    // Progress Bars
+    .scrum {
+      position: relative;
+      width: 100%;
+      height: 2em;
+      background-color: $medium-color;
+      border-radius: 1.5em;
+      color: #fff;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
     }
+
+    .scrum::before {
+      content: attr(data-label);
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: .25em;
+      top: .25em;
+      bottom: .25em;
+      width: calc(var(--width, 0) * 1%);
+      min-width: 2rem;
+      max-width: calc(100% - 10.5em);
+      background-color: $main-color;
+      border-radius: 1em;
+      padding: 0.75em;
+    }
+
+    .kanban {
+      position: relative;
+      width: 100%;
+      height: 2em;
+      background-color: $medium-color;
+      border-radius: 1.5em;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+
+    .kanban::before {
+      content: attr(data-label);
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: .25em;
+      top: .25em;
+      bottom: .25em;
+      width: calc(var(--width, 0) * 1%);
+      min-width: 2rem;
+      max-width: calc(100% - 10.5em);
+      background-color: $main-color;
+      border-radius: 1em;
+      padding: 0.75em;
+    }
+
+    .waterfall {
+      position: relative;
+      width: 100%;
+      height: 2em;
+      background-color: $medium-color;
+      border-radius: 1.5em;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+
+    .waterfall::before {
+      content: attr(data-label);
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: .25em;
+      top: .25em;
+      bottom: .25em;
+      width: calc(var(--width, 0) * 1%);
+      min-width: 2rem;
+      max-width: calc(100% - 10.5em);
+      background-color: $main-color;
+      border-radius: 1em;
+      padding: 0.75em;
+    }
+
+    .msproject {
+      position: relative;
+      width: 100%;
+      height: 2em;
+      background-color: $medium-color;
+      border-radius: 1.5em;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+
+    .msproject::before {
+      content: attr(data-label);
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: .25em;
+      top: .25em;
+      bottom: .25em;
+      width: calc(var(--width, 0) * 1%);
+      min-width: 2rem;
+      max-width: calc(100% - 10.5em);
+      background-color: $main-color;
+      border-radius: 1em;
+      padding: 0.75em;
+    }
+
+    .jira {
+      position: relative;
+      width: 100%;
+      height: 2em;
+      background-color: $medium-color;
+      border-radius: 1.5em;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+
+    .jira::before {
+      content: attr(data-label);
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: .25em;
+      top: .25em;
+      bottom: .25em;
+      width: calc(var(--width, 0) * 1%);
+      min-width: 2rem;
+      max-width: calc(100% - 10.5em);
+      background-color: $main-color;
+      border-radius: 1em;
+      padding: 0.75em;
+    }
+
+    .azure {
+      position: relative;
+      width: 100%;
+      height: 2em;
+      background-color: $medium-color;
+      border-radius: 1.5em;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+
+    .azure::before {
+      content: attr(data-label);
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: .25em;
+      top: .25em;
+      bottom: .25em;
+      width: calc(var(--width, 0) * 1%);
+      min-width: 2rem;
+      max-width: calc(100% - 10.5em);
+      background-color: $main-color;
+      border-radius: 1em;
+      padding: 0.75em;
+    }
+
+    .tfs {
+      position: relative;
+      width: 100%;
+      height: 2em;
+      background-color: $medium-color;
+      border-radius: 1.5em;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+
+    .tfs::before {
+      content: attr(data-label);
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: .25em;
+      top: .25em;
+      bottom: .25em;
+      width: calc(var(--width, 0) * 1%);
+      min-width: 2rem;
+      max-width: calc(100% - 10.5em);
+      background-color: $main-color;
+      border-radius: 1em;
+      padding: 0.75em;
+    }
+
+    .leankit {
+      position: relative;
+      width: 100%;
+      height: 2em;
+      background-color: $medium-color;
+      border-radius: 1.5em;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+
+    .leankit::before {
+      content: attr(data-label);
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: .25em;
+      top: .25em;
+      bottom: .25em;
+      width: calc(var(--width, 0) * 1%);
+      min-width: 2rem;
+      max-width: calc(100% - 10.5em);
+      background-color: $main-color;
+      border-radius: 1em;
+      padding: 0.75em;
+    }
+
+    .trello {
+      position: relative;
+      width: 100%;
+      height: 2em;
+      background-color: $medium-color;
+      border-radius: 1.5em;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+
+    .trello::before {
+      content: attr(data-label);
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: .25em;
+      top: .25em;
+      bottom: .25em;
+      width: calc(var(--width, 0) * 1%);
+      min-width: 2rem;
+      max-width: calc(100% - 10.5em);
+      background-color: $main-color;
+      border-radius: 1em;
+      padding: 0.75em;
+    }
+    
+    .htm {
+      position: relative;
+      width: 100%;
+      height: 2em;
+      background-color: $medium-color;
+      border-radius: 1.5em;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+
+    .htm::before {
+      content: attr(data-label);
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: .25em;
+      top: .25em;
+      bottom: .25em;
+      width: calc(var(--width, 0) * 1%);
+      min-width: 2rem;
+      max-width: calc(100% - 10.5em);
+      background-color: $main-color;
+      border-radius: 1em;
+      padding: 0.75em;
+    }
+
+    .cs {
+      position: relative;
+      width: 100%;
+      height: 2em;
+      background-color: $medium-color;
+      border-radius: 1.5em;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+
+    .cs::before {
+      content: attr(data-label);
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: .25em;
+      top: .25em;
+      bottom: .25em;
+      width: calc(var(--width, 0) * 1%);
+      min-width: 2rem;
+      max-width: calc(100% - 10.5em);
+      background-color: $main-color;
+      border-radius: 1em;
+      padding: 0.75em;
+    }
+
+    .js {
+      position: relative;
+      width: 100%;
+      height: 2em;
+      background-color: $medium-color;
+      border-radius: 1.5em;
+      color: #fff;
+    }
+
+    .js::before {
+      content: attr(data-label);
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: .25em;
+      top: .25em;
+      bottom: .25em;
+      width: calc(var(--width, 0) * 1%);
+      min-width: 2rem;
+      max-width: calc(100% - 10.5em);
+      background-color: $main-color;
+      border-radius: 1em;
+      padding: 0.75em;
+    }
+
   }
+}
+
+// Career Highlights
+#work-a {
+  overflow-x: hidden;
+  background: $cv-color;
+}
+
+#work-a ul {
+  padding: 50px 0;
+
+}
+
+// CV Line
+#work-a ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #fff;
+}
+
+// Boxes
+#work-a ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 1rem;
+  background: $medium-color;
+  transition: all 0.5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.date {
+  font-style: italic;
+}
+
+// Right Side
+#work-a ul li:nth-child(odd) div {
+  left: 40px;
+  text-align: left;
+  transform: translate(200px, 0);
+}
+
+// left Side
+#work-a ul li:nth-child(even) div {
+  left: -464px;
+  text-align: left;
+  transform: translate(-200px, 0);
+}
+
+// Show Boxes
+#work-a ul li.show div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+// Dots
+#work-a ul li:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 25px;
+  height: 25px;
+  background: inherit;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  transition: background 0.5s ease-in-out;
+}
+
+#work-a ul li.show:after {
+  background: $medium-color;
+}
+
+// Arrows Base
+#work-a div:before {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+// Right Side Arrows
+#work-a ul li:nth-child(odd) div:before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent $medium-color transparent transparent;
+}
+
+// Left Side Arrows
+#work-a ul li:nth-child(even) div:before {
+  right: -15px;
+  border-width: 8px 0px 8px 16px;
+  border-color: transparent transparent transparent $medium-color;
 }
 
 // Contact Page
@@ -418,6 +777,8 @@ img {
     }
   }
 }
+
+
 
 // Import Media Queries
 @import 'media';
