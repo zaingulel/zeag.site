@@ -20,6 +20,7 @@ It was not until a friend of mine told me that having one is more important than
 
 - HTML
 - CSS3
+- SASS
 - JavaScript
 - Bootstrap 4.4.1
 - Jquery 3.4.1
