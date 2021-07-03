@@ -11,7 +11,7 @@
 
 
 As a kid I already picked up HTML, but I never really developed any further coding skills... Many years after, when the pandemic kicked in, is when I finally made the time to learn to create websites. 
-Thanks to a few courses on Udemy and some Youtube videos I quickly picked up HTML, CSS3 and JavaScript. 
+Thanks to a few courses on Udemy and some Youtube videos I quickly picked up HTML, CSS3, SASS and JavaScript. 
 I really wanted to put what I learned to practice and so the Portfolio project seemed like a good idea. I have changed it numerous times and was never really happy with it. 
 It was not until a friend of mine told me that having one is more important than waiting until the website was perfect. That is when I decided I should just publish the portfolio website. 
 
