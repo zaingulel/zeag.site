@@ -52,11 +52,9 @@ img {
   padding-top: 0.5rem;
   width: 100%;
   transition: background 0.5s;
-  
 
   ul {
     display: flex;
-    
   }
 
   li {
@@ -92,7 +90,6 @@ img {
   transition: padding 0.5s;
 }
 
-
 // Header
 #header {
   // Header Home
@@ -124,7 +121,6 @@ img {
       display: grid;
       grid-gap: 1rem;
       grid-template-columns: repeat(4, 1fr);
-      
 
       .fas {
         color: $main-color;
@@ -173,10 +169,10 @@ img {
   &-a {
     .about-info {
       display: grid;
-      grid-template-areas: 
-      'bioimage bio bio'
-      'ct1 ct2 ct3'
-      'ct4 ct5 ct6';
+      grid-template-areas:
+        "bioimage bio bio"
+        "ct1 ct2 ct3"
+        "ct4 ct5 ct6";
       grid-gap: 1.2rem;
     }
 
@@ -194,7 +190,7 @@ img {
     .certs-1 {
       grid-area: ct1;
       font-size: 1rem;
-      
+
       img {
         margin-bottom: 1rem;
         height: 12.5rem;
@@ -234,7 +230,7 @@ img {
         width: 12.5rem;
       }
     }
-    
+
     .certs-5 {
       grid-area: ct5;
       font-size: 1rem;
@@ -261,242 +257,6 @@ img {
   // About B
   &-b {
 
-    // Progress Bars
-    .scrum {
-      position: relative;
-      width: 100%;
-      height: 2em;
-      background-color: $medium-color;
-      border-radius: 1.5em;
-      color: #fff;
-      margin-bottom: 2rem;
-      margin-top: 2rem;
-    }
-
-    .scrum::before {
-      content: attr(data-label);
-      display: flex;
-      align-items: center;
-      position: absolute;
-      left: .25em;
-      top: .25em;
-      bottom: .25em;
-      width: calc(var(--width, 0) * 1%);
-      min-width: 2rem;
-      max-width: calc(100% - 10.5em);
-      background-color: $main-color;
-      border-radius: 1em;
-      padding: 0.75em;
-    }
-
-    .kanban {
-      position: relative;
-      width: 100%;
-      height: 2em;
-      background-color: $medium-color;
-      border-radius: 1.5em;
-      color: #fff;
-      margin-bottom: 2rem;
-    }
-
-    .kanban::before {
-      content: attr(data-label);
-      display: flex;
-      align-items: center;
-      position: absolute;
-      left: .25em;
-      top: .25em;
-      bottom: .25em;
-      width: calc(var(--width, 0) * 1%);
-      min-width: 2rem;
-      max-width: calc(100% - 10.5em);
-      background-color: $main-color;
-      border-radius: 1em;
-      padding: 0.75em;
-    }
-
-    .waterfall {
-      position: relative;
-      width: 100%;
-      height: 2em;
-      background-color: $medium-color;
-      border-radius: 1.5em;
-      color: #fff;
-      margin-bottom: 2rem;
-    }
-
-    .waterfall::before {
-      content: attr(data-label);
-      display: flex;
-      align-items: center;
-      position: absolute;
-      left: .25em;
-      top: .25em;
-      bottom: .25em;
-      width: calc(var(--width, 0) * 1%);
-      min-width: 2rem;
-      max-width: calc(100% - 10.5em);
-      background-color: $main-color;
-      border-radius: 1em;
-      padding: 0.75em;
-    }
-
-    .msproject {
-      position: relative;
-      width: 100%;
-      height: 2em;
-      background-color: $medium-color;
-      border-radius: 1.5em;
-      color: #fff;
-      margin-bottom: 2rem;
-    }
-
-    .msproject::before {
-      content: attr(data-label);
-      display: flex;
-      align-items: center;
-      position: absolute;
-      left: .25em;
-      top: .25em;
-      bottom: .25em;
-      width: calc(var(--width, 0) * 1%);
-      min-width: 2rem;
-      max-width: calc(100% - 10.5em);
-      background-color: $main-color;
-      border-radius: 1em;
-      padding: 0.75em;
-    }
-
-    .jira {
-      position: relative;
-      width: 100%;
-      height: 2em;
-      background-color: $medium-color;
-      border-radius: 1.5em;
-      color: #fff;
-      margin-bottom: 2rem;
-    }
-
-    .jira::before {
-      content: attr(data-label);
-      display: flex;
-      align-items: center;
-      position: absolute;
-      left: .25em;
-      top: .25em;
-      bottom: .25em;
-      width: calc(var(--width, 0) * 1%);
-      min-width: 2rem;
-      max-width: calc(100% - 10.5em);
-      background-color: $main-color;
-      border-radius: 1em;
-      padding: 0.75em;
-    }
-
-    .azure {
-      position: relative;
-      width: 100%;
-      height: 2em;
-      background-color: $medium-color;
-      border-radius: 1.5em;
-      color: #fff;
-      margin-bottom: 2rem;
-    }
-
-    .azure::before {
-      content: attr(data-label);
-      display: flex;
-      align-items: center;
-      position: absolute;
-      left: .25em;
-      top: .25em;
-      bottom: .25em;
-      width: calc(var(--width, 0) * 1%);
-      min-width: 2rem;
-      max-width: calc(100% - 10.5em);
-      background-color: $main-color;
-      border-radius: 1em;
-      padding: 0.75em;
-    }
-
-    .tfs {
-      position: relative;
-      width: 100%;
-      height: 2em;
-      background-color: $medium-color;
-      border-radius: 1.5em;
-      color: #fff;
-      margin-bottom: 2rem;
-    }
-
-    .tfs::before {
-      content: attr(data-label);
-      display: flex;
-      align-items: center;
-      position: absolute;
-      left: .25em;
-      top: .25em;
-      bottom: .25em;
-      width: calc(var(--width, 0) * 1%);
-      min-width: 2rem;
-      max-width: calc(100% - 10.5em);
-      background-color: $main-color;
-      border-radius: 1em;
-      padding: 0.75em;
-    }
-
-    .leankit {
-      position: relative;
-      width: 100%;
-      height: 2em;
-      background-color: $medium-color;
-      border-radius: 1.5em;
-      color: #fff;
-      margin-bottom: 2rem;
-    }
-
-    .leankit::before {
-      content: attr(data-label);
-      display: flex;
-      align-items: center;
-      position: absolute;
-      left: .25em;
-      top: .25em;
-      bottom: .25em;
-      width: calc(var(--width, 0) * 1%);
-      min-width: 2rem;
-      max-width: calc(100% - 10.5em);
-      background-color: $main-color;
-      border-radius: 1em;
-      padding: 0.75em;
-    }
-
-    .trello {
-      position: relative;
-      width: 100%;
-      height: 2em;
-      background-color: $medium-color;
-      border-radius: 1.5em;
-      color: #fff;
-      margin-bottom: 2rem;
-    }
-
-    .trello::before {
-      content: attr(data-label);
-      display: flex;
-      align-items: center;
-      position: absolute;
-      left: .25em;
-      top: .25em;
-      bottom: .25em;
-      width: calc(var(--width, 0) * 1%);
-      min-width: 2rem;
-      max-width: calc(100% - 10.5em);
-      background-color: $main-color;
-      border-radius: 1em;
-      padding: 0.75em;
-    }
-    
     .htm {
       position: relative;
       width: 100%;
@@ -512,9 +272,9 @@ img {
       display: flex;
       align-items: center;
       position: absolute;
-      left: .25em;
-      top: .25em;
-      bottom: .25em;
+      left: 0.25em;
+      top: 0.25em;
+      bottom: 0.25em;
       width: calc(var(--width, 0) * 1%);
       min-width: 2rem;
       max-width: calc(100% - 10.5em);
@@ -538,9 +298,9 @@ img {
       display: flex;
       align-items: center;
       position: absolute;
-      left: .25em;
-      top: .25em;
-      bottom: .25em;
+      left: 0.25em;
+      top: 0.25em;
+      bottom: 0.25em;
       width: calc(var(--width, 0) * 1%);
       min-width: 2rem;
       max-width: calc(100% - 10.5em);
@@ -563,9 +323,9 @@ img {
       display: flex;
       align-items: center;
       position: absolute;
-      left: .25em;
-      top: .25em;
-      bottom: .25em;
+      left: 0.25em;
+      top: 0.25em;
+      bottom: 0.25em;
       width: calc(var(--width, 0) * 1%);
       min-width: 2rem;
       max-width: calc(100% - 10.5em);
@@ -573,7 +333,6 @@ img {
       border-radius: 1em;
       padding: 0.75em;
     }
-
   }
 }
 
@@ -585,7 +344,6 @@ img {
 
 #work-a ul {
   padding: 50px 0;
-
 }
 
 // CV Line
@@ -637,7 +395,7 @@ img {
 
 // Dots
 #work-a ul li:after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   bottom: 0;
@@ -655,7 +413,7 @@ img {
 
 // Arrows Base
 #work-a div:before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 5px;
   width: 0;
@@ -682,10 +440,10 @@ img {
   &-a {
     .text-fields {
       display: grid;
-      grid-template-areas: 
-      'name email'
-      'subject phone'
-      'message message';
+      grid-template-areas:
+        "name email"
+        "subject phone"
+        "message message";
       grid-gap: 1.2rem;
       margin-bottom: 1.2rem;
 
@@ -714,10 +472,9 @@ img {
       .text-input {
         padding: 0.5rem 1rem;
       }
-      
     }
 
-    button[type='submit'] {
+    button[type="submit"] {
       width: 25%;
     }
   }
@@ -726,7 +483,7 @@ img {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       text-align: center;
-      }
+    }
   }
 
   &-c {
@@ -768,7 +525,7 @@ img {
       }
 
       &.lin:hover {
-        background: #0077B5;
+        background: #0077b5;
       }
 
       &.ins:hover {
@@ -778,7 +535,5 @@ img {
   }
 }
 
-
-
 // Import Media Queries
-@import 'media';
+@import "media";
