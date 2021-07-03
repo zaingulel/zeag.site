@@ -24,7 +24,6 @@ It was not until a friend of mine told me that having one is more important than
 - JavaScript
 - Bootstrap 4.4.1
 - Jquery 3.3.1
-- popper.js
 - typewriter.js
 
 
