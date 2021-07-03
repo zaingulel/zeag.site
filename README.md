@@ -16,7 +16,7 @@ I really wanted to put what I learned to practice and so the Portfolio project s
 It was not until a friend of mine told me that having one is more important than waiting until the website was perfect. That is when I decided I should just publish the portfolio website. 
 
 
-## TECHNOLOGIES
+## Technologies
 
 - HTML
 - CSS3
