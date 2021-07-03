@@ -341,7 +341,8 @@ img {
   grid-template-areas:
     "bioimage bio bio"
     "ct1 ct2 ct3"
-    "ct4 ct5 ct6";
+    "ct4 ct5 ct6"
+    "ct7 ct8 ct9";
   grid-gap: 1.2rem;
 }
 
@@ -415,6 +416,26 @@ img {
   width: 12.5rem;
 }
 
+#about-a .certs-7 {
+  grid-area: ct7;
+  font-size: 1rem;
+}
+#about-a .certs-7 img {
+  margin-bottom: 1rem;
+  height: 12.5rem;
+  width: 12.5rem;
+}
+
+#about-a .certs-8 {
+  grid-area: ct8;
+  font-size: 1rem;
+}
+#about-a .certs-8 img {
+  margin-bottom: 1rem;
+  height: 12.5rem;
+  width: 12.5rem;
+}
+
 .tooltip {
   position: relative;
   display: inline-block;
@@ -424,13 +445,15 @@ img {
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
-  color:#EEEEEE;
-  background-color:#444444;
+  color: #eeeeee;
+  background-color: #444444;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
-  box-shadow:0 1px 8px rgba(0,0,0,0.5);
-  visibility:hidden; opacity:0; transition:opacity 0.8s;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.8s;
 
   /* Position the tooltip */
   position: absolute;
@@ -441,7 +464,7 @@ img {
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
-  opacity:1;
+  opacity: 1;
 }
 
 #about-b .scrum {
