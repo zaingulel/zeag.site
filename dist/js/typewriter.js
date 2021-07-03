@@ -65,7 +65,7 @@ function init() {
 }
 
 // Smooth Scrolling
-$('#main-nav a, .btn, #home-a a, #home-b a').on('click', function(event) {
+$('#main-nav a, #btn-work, #home-a a, #home-b a, #work-a a').on('click', function(event) {
   if (this.hash !== '') {
     event.preventDefault();
 
