@@ -36,5 +36,6 @@ To run this project, open the 'index.html' file located  in dist folder
 This project is inspired by: 
 - Traversy Media's Modern HTML & CSS From The Beginning https://www.udemy.com/course/modern-html-css-from-the-beginning/
 - Traversy Media's Bootstrap 4 From Scratch with 5 Projects https://www.udemy.com/course/bootstrap-4-from-scratch-with-5-projects/
+- Traversy Media's Modern JavaScript From The Beginning https://www.udemy.com/course/modern-javascript-from-the-beginning/
 - Traversy Media's Youtube video https://www.youtube.com/watch?v=POX3dT-pB4E&ab_channel=TraversyMedia
 
