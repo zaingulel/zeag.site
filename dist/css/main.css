@@ -954,8 +954,11 @@ img {
 }
 
 #recap {
-  margin: auto;
-  padding: 0.5rem;
+  text-align: center;
+}
+
+.recaptcha {
+  display: inline-block;
 }
 
 #contact-a .text-fields .name-input {
