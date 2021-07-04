@@ -952,6 +952,12 @@ img {
   grid-gap: 1.2rem;
   margin-bottom: 1.2rem;
 }
+
+#contact-a .recap {
+  margin: auto;
+  width: 50%;
+}
+
 #contact-a .text-fields .name-input {
   grid-area: name;
 }
