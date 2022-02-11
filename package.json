@@ -9,6 +9,6 @@
   "author": "Zain Gulel",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^6.0.1"
+    "node-sass": "^7.0.0"
   }
 }
